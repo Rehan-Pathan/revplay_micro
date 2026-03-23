@@ -1,24 +1,28 @@
-# ── server ──────────────────────────────────────────
 server:
-    port: 8888
+  port: 8888
 
-  # ── identity ────────────────────────────────────────
 spring:
   application:
     name: CONFIG-SERVER
 
-    # ── switch to native (local folder) mode ──────────
   profiles:
-    active: native
+    active: composite        # ← change from 'native' to 'composite'
 
   cloud:
     config:
       server:
-          # ── read yml files from this folder ─────────
-        native:
-          search-locations: classpath:/properties/
+        composite:
+          # ── GitHub (primary source) ──────────────────
+          - type: git
+            uri: https://github.com/Rehan-Pathan/revplay_micro
+            search-paths: revplay-config-server/src/main/resources/properties
+            default-label: main
+            clone-on-start: true
 
-  # ── eureka registration ──────────────────────────────
+          # ── Local fallback ───────────────────────────
+          - type: native
+            search-locations: classpath:/properties/
+
 eureka:
   client:
     service-url:
@@ -26,12 +30,10 @@ eureka:
   instance:
     prefer-ip-address: true
 
-  # ── logging ──────────────────────────────────────────
 logging:
   level:
     org.springframework.cloud.config: DEBUG
 
-  # ── health endpoints ─────────────────────────────────
 management:
   endpoints:
     web:
