@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/properties" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-analytics-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-api-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-catalog-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-config-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-eureka-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-favorites-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-playback-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-playlist-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-security" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/revplay-user-service" vcs="Git" />
+  </component>
+</project>

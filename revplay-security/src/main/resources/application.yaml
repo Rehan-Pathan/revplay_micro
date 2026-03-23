@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: revplay-security
+jwt:
+  secret: mySecretKeyForJWTTokenGenerationThatIsAtLeast256BitsLongForHS256Algorithm

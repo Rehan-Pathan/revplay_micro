@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: CATALOG-SERVICE
+
+  config:
+    import: configserver:http://localhost:8888
+
+  profiles:
+    active: local
+
+  cloud:
+    config:
+      fail-fast: true
+      retry:
+        initial-interval: 2000
+        max-attempts: 10
+
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="revplay-eureka-server" />
+        <module name="revplay-config-server" />
+        <module name="revplay-security" />
+      </profile>
+      <profile name="Annotation profile for revplay-api-gateway" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+        </processorPath>
+        <module name="revplay-api-gateway" />
+      </profile>
+      <profile name="Annotation profile for revplay-favorites-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="revplay-playlist-service" />
+        <module name="revplay-user-service" />
+        <module name="revplay-analytics-service" />
+        <module name="revplay-favorites-service" />
+        <module name="revplay-playback-service" />
+        <module name="revplay-catalog-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="revplay-analytics-service" options="-parameters" />
+      <module name="revplay-api-gateway" options="-parameters" />
+      <module name="revplay-catalog-service" options="-parameters" />
+      <module name="revplay-config-server" options="-parameters" />
+      <module name="revplay-eureka-server" options="-parameters" />
+      <module name="revplay-favorites-service" options="-parameters" />
+      <module name="revplay-playback-service" options="-parameters" />
+      <module name="revplay-playlist-service" options="-parameters" />
+      <module name="revplay-security" options="-parameters" />
+      <module name="revplay-user-service" options="-parameters" />
+    </option>
+  </component>
+</project>
