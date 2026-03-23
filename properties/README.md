@@ -1,2 +1,0 @@
-# revplay-config
-Configuration file
